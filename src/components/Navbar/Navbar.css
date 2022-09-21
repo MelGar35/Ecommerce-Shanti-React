@@ -1,8 +1,15 @@
 
 
-.Navbar{
+.Navbar {
+    min-width: 100vh;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content:space-around;
+    color: black;
+    border-bottom: 1px solid black;
+    
 }
+
+
 
 /*ver porque no funciona*/

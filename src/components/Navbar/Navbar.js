@@ -1,18 +1,20 @@
 import './Navbar.css';
 import CartWidget from "../CartWidget/CartWidget";
+import Button from '../Button/Button';
 
 const Navbar = () => {
     return(
-    <nav>
+    <nav className='Navbar'>
         <div>
             <h1>
                 Shanti
             </h1>
         </div>
         <div>
-            <button>Sahumos</button>
-            <button>Libros</button>
-            <button>Bazar</button>
+            <Button Label={'Sahumos'} estilos={'Button'} action={()=>console.log('click')}/>
+            <Button Label={'Libros'} estilos={'Button'} action={()=>console.log('click')}/>
+            <Button Label={'Bazar'} estilos={'Button'} action={()=>console.log('click')}/>
+            <Button Label={'Ceramica'} estilos={'Button'} action={()=>console.log('click')}/>
         </div>
         <div>
             <CartWidget/>
@@ -20,5 +22,6 @@ const Navbar = () => {
     </nav>
     )
 }
+
 
 export default Navbar

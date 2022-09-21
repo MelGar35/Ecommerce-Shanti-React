@@ -4,10 +4,12 @@ import Navbar from './components/Navbar/Navbar';
 
 
 
+
+
 function App() {
   return (
     <div className="App">
-       <Navbar className="Navbar"/>
+       <Navbar/>
        <ItemListContainer greeting={'Bienvenidos a Shanti'}/>
     </div>
   );
