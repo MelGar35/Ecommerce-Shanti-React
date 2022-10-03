@@ -13,7 +13,7 @@ const Navbar = () => {
         <div>
             <Button Label={'Sahumos'} estilos={'Button'} action={()=>console.log('click')}/>
             <Button Label={'Libros'} estilos={'Button'} action={()=>console.log('click')}/>
-            <Button Label={'Bazar'} estilos={'Button'} action={()=>console.log('click')}/>
+            <Button Label={'Tarot'} estilos={'Button'} action={()=>console.log('click')}/>
             <Button Label={'Ceramica'} estilos={'Button'} action={()=>console.log('click')}/>
         </div>
         <div>
