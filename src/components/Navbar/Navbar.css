@@ -10,6 +10,12 @@
     
 }
 
+.button{
+    background-color:rgb(5, 5, 5);
+    padding: 8px;
+    margin:10px;
+    color: aliceblue;
+    border-radius: 7px;
+}
 
 
-/*ver porque no funciona*/

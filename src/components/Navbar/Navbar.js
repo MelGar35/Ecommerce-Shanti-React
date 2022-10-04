@@ -1,6 +1,6 @@
 import './Navbar.css';
 import CartWidget from "../CartWidget/CartWidget";
-import Button from '../Button/Button';
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
     return(
@@ -11,10 +11,10 @@ const Navbar = () => {
             </h1>
         </div>
         <div>
-            <Button Label={'Sahumos'} estilos={'Button'} action={()=>console.log('click')}/>
-            <Button Label={'Libros'} estilos={'Button'} action={()=>console.log('click')}/>
-            <Button Label={'Tarot'} estilos={'Button'} action={()=>console.log('click')}/>
-            <Button Label={'Ceramica'} estilos={'Button'} action={()=>console.log('click')}/>
+            <Link to={`/category/sahumos`} className="button">Sahumos</Link>
+            <Link to={`/category/libros`} className="button">Libros</Link>
+            <Link to={`/category/tarot`} className="button">Tarot</Link>
+            <Link to={`/category/ceramica`} className="button">Ceramica</Link>
         </div>
         <div>
             <CartWidget/>
