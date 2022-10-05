@@ -8,6 +8,7 @@
     color: black;
     border-bottom: 1px solid black;
     
+    
 }
 
 .button{
@@ -16,6 +17,7 @@
     margin:10px;
     color: aliceblue;
     border-radius: 7px;
+    text-decoration: none;
 }
 
 

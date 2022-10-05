@@ -2,7 +2,7 @@ const products = [
     {
         id: "355",
         name: "Porta Sahumerio Hanuman",
-        imgSrc: "../Img/portasahumeriohanuman.jpg",
+        imgSrc: "../../Item/assets/portasahumeriohanuman.jpg",
         category: "ceramica",
         description: "De cerámica, pintado a mano",
         price: 1000,

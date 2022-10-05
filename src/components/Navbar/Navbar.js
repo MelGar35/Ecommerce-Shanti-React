@@ -9,8 +9,10 @@ const Navbar = () => {
             <h1>
                 Shanti
             </h1>
+            
         </div>
         <div>
+            <Link to={`/`} className="button">Inicio</Link>
             <Link to={`/category/sahumos`} className="button">Sahumos</Link>
             <Link to={`/category/libros`} className="button">Libros</Link>
             <Link to={`/category/tarot`} className="button">Tarot</Link>

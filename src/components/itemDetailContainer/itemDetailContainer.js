@@ -5,16 +5,24 @@ import {useParams} from "react-router-dom"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
-    
+    const [loading, setLoading] = useState (true)
     const {productId} = useParams()
 
    
     useEffect(()=>{
         getProduct(productId).then(product =>{
             setProduct(product)
+        }).finally(()=>{
+            setLoading(false)
         })
     
-    },[])
+    },[productId])
+
+    if (loading) {
+        return (
+            <h2>Loading...</h2>
+        )
+    }
 
     console.log(product);
     return (
@@ -24,7 +32,7 @@ const ItemDetailContainer = () => {
             <h2>{product.name}</h2>
             <h2>${product.price}.-</h2>
             <h3>{product.description}</h3>
-            {/*Counter*/}
+           
             </div>
         </div>   
     )
