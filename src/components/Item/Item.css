@@ -1,16 +1,29 @@
-
-
 .card{
     display: inline-block;
     flex-direction:column;
+    justify-content: center;
+    align-items: center;
     color: black;
-    width: 700px;
-    height: 500px;
-    padding: 10px;
-    margin: 10px;
+    width: 500px;
+    margin: 50px;
+    padding: 30px;
     border: 1px solid black ;
-    background-color: blue; 
 }
 
+.img{
+    width: 250px;
+    height: 350px;
+}
 
-
+.buttonDetail{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    background-color: black;
+    height: 60px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    padding: 10px;
+}

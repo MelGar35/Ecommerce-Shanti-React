@@ -2,7 +2,7 @@ const products = [
     {
         id: "355",
         name: "Porta Sahumerio Hanuman",
-        imgSrc: "../../Item/assets/portasahumeriohanuman.jpg",
+        imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/portasahumeriohanuman.jpg",
         category: "ceramica",
         description: "De cerámica, pintado a mano",
         price: 1000,
@@ -11,7 +11,7 @@ const products = [
     {
         id: "356",
         name: "El Tarot como Llave",
-        imgSrc: "../Img/tarotcomollave.jpg",
+        imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/tarotcomollave.jpg",
         category: "libros",
         description: "Autor: Dalia Walker",
         price: 4800,
@@ -20,7 +20,7 @@ const products = [
     {
         id: "357",
         name: "Mazo Tarot Viceversa",
-        imgSrc: "../Img/tarotviceversa.jpg",
+        imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/tarotviceversa.jpg",
         category: "tarot",
         description: "Autora:Lunaea Weatherstone",
         price: 2500,
@@ -29,7 +29,7 @@ const products = [
     {
         id: "358",
         name: "Oráculo del Gato",
-        imgSrc: "../Img/oraculodelgato.jpg",
+        imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/oraculodelgato.jpg",
         category: "tarot",
         description: "Autora: La Watson",
         price: 1200,
@@ -38,7 +38,7 @@ const products = [
     {
         id: "359",
         name: "Sahumo Akasha",
-        imgSrc: "../Img/sahumos.jpg",
+        imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/sahumos.jpg",
         category: "sahumos",
         description: "Romero, Lavanda, Canela y palo santo",
         price: 600,

@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: rgb(155, 64, 64);
   min-width: 100vh;
   display: flex;
   justify-content:space-around;
