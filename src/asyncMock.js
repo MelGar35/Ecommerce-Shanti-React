@@ -6,7 +6,7 @@ const products = [
         category: "ceramica",
         description: "De cerámica, pintado a mano",
         price: 1000,
-        stock: 300
+        stock: 10
     },
     {
         id: "356",
@@ -15,7 +15,7 @@ const products = [
         category: "libros",
         description: "Autor: Dalia Walker",
         price: 4800,
-        stock: 250
+        stock: 9
     },
     {
         id: "357",
@@ -24,7 +24,7 @@ const products = [
         category: "tarot",
         description: "Autora:Lunaea Weatherstone",
         price: 2500,
-        stock: 100
+        stock: 7
     },
     {
         id: "358",
@@ -33,7 +33,7 @@ const products = [
         category: "tarot",
         description: "Autora: La Watson",
         price: 1200,
-        stock: 250
+        stock: 5
     },
     {
         id: "359",
@@ -42,7 +42,7 @@ const products = [
         category: "sahumos",
         description: "Romero, Lavanda, Canela y palo santo",
         price: 600,
-        stock: 405
+        stock: 4
     }
 ]
 

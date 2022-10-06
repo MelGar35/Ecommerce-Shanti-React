@@ -26,7 +26,6 @@ const ItemDetailContainer = () => {
         )
     }
 
-    console.log(product);
     return (
         <div>
             <h1>Detalle del producto</h1>
