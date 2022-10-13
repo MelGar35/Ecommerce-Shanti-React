@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { getProduct } from "../../asyncMock"
 import {useParams} from "react-router-dom"
 import {Link} from "react-router-dom"
-import "./itemDetailContainer.css"
+import "./ItemDetailContainer.css"
 import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetailContainer = () => {
