@@ -4,7 +4,7 @@ const products = [
         name: "Porta Sahumerio Hanuman",
         imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/portasahumeriohanuman.jpg",
         category: "ceramica",
-        description: "De cerámica, pintado a mano",
+        description: "De cerámica, pintado a mano.",
         price: 1000,
         stock: 10
     },
@@ -13,7 +13,7 @@ const products = [
         name: "El Tarot como Llave",
         imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/tarotcomollave.jpg",
         category: "libros",
-        description: "Autor: Dalia Walker",
+        description: "Autor: Dalia Walker.",
         price: 4800,
         stock: 9
     },
@@ -22,7 +22,7 @@ const products = [
         name: "Mazo Tarot Viceversa",
         imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/tarotviceversa.jpg",
         category: "tarot",
-        description: "Autora:Lunaea Weatherstone",
+        description: "Autora:Lunaea Weatherstone.",
         price: 2500,
         stock: 7
     },
@@ -31,7 +31,7 @@ const products = [
         name: "Oráculo del Gato",
         imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/oraculodelgato.jpg",
         category: "tarot",
-        description: "Autora: La Watson",
+        description: "Autora: La Watson.",
         price: 1200,
         stock: 5
     },
@@ -40,7 +40,7 @@ const products = [
         name: "Sahumo Akasha",
         imgSrc: "https://raw.githubusercontent.com/MelGar35/EntregaTfinalJS/main/Img/sahumos.jpg",
         category: "sahumos",
-        description: "Romero, Lavanda, Canela y palo santo",
+        description: "Romero, Lavanda, Canela y palo santo.",
         price: 600,
         stock: 4
     }

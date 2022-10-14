@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
             <img src={product.imgSrc} alt={product.name} className='img'/>
             <h3>Precio: ${product.price}.-</h3>
             <h3>{product.description}</h3>
-            <ItemCount/>
+            <ItemCount stock={product.stock}/>
             <Link to={`/detail/${product.id}`} className="buttonAgregar">Agregar al carrito</Link>
         </div>
         </div>   
