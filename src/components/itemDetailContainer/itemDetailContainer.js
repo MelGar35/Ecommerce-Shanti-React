@@ -28,9 +28,9 @@ const ItemDetailContainer = () => {
     return (
         <div>
             <h1>Detalle del producto</h1>
-            <div className="card">
+            <div className="cardDetail">
             <h2>{product.name}</h2>
-            <img src={product.imgSrc} alt={product.name} className='img'/>
+            <img src={product.imgSrc} alt={product.name} className='imgDetail'/>
             <h3>Precio: ${product.price}.-</h3>
             <h3>{product.description}</h3>
             <ItemCount stock={product.stock}/>
