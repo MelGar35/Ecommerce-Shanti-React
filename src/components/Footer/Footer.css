@@ -1,0 +1,11 @@
+.footer {
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
+    padding: 20px;
+    background-color: black;
+    
+}

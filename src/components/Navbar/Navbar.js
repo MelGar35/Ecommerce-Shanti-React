@@ -1,15 +1,13 @@
 import './Navbar.css';
 import CartWidget from "../CartWidget/CartWidget";
 import {Link} from "react-router-dom"
+import ShantiLogo from "../ShantiLogo/ShantiLogo"
 
 const Navbar = () => {
     return(
     <nav className='Navbar'>
         <div>
-            <h1>
-                Shanti
-            </h1>
-            
+            <ShantiLogo/>
         </div>
         <div>
             <Link to={`/`} className="button">Inicio</Link>
