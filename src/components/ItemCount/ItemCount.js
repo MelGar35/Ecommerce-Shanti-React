@@ -2,11 +2,11 @@ import {useState} from "react"
 import "./ItemCount.css"
 
 
-const ItemCount = ({stock}) =>{
+const ItemCount = ({onConfirm, stock}) =>{
     const [count, setCount] = useState(0)
 
     const decrement = () =>{
-        if(count > 0){
+        if(count > 1){
             setCount (count - 1)
         } 
     }
@@ -22,7 +22,11 @@ const ItemCount = ({stock}) =>{
             <button className="counterButton" onClick={decrement}>-</button>
             <h3>{count}</h3>
             <button className="counterButton" onClick={increment}>+</button>
+            <div >
+                <button onClick={()=> onConfirm(count)} className="buttonAgregar">Agregar al Carrito</button>
+            </div>
         </div>
+        
     )
 }
 
