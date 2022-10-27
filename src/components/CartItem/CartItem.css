@@ -5,34 +5,26 @@
     width: auto;
     margin: 20px 40px;
     font-size: 15px;
-    background-color: rgb(96, 216, 176);
+    background-color: #42b792cd;
     border-radius: 10px;
     min-width: 100vh;
     color: black;
     padding: 15px;
 }
 
-
 .ContainerItemCartItem {
     display: flex;
 }
 
-.ItemHeaderCartItem {
-    display: flex;
-    justify-content: space-between;
-    line-height: 50px;
-}
-
-.InfoCartItem {
+.InfoPedidoCart{
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
-    font-weight: 500;
     margin-right: 50px;
     line-height: 50px;
 }
 
-.ButtonCartItem {
+.eliminarButton {
     background-color: black;
     color: white;
     font-weight: 600;
@@ -42,12 +34,7 @@
     margin: auto ;
 }
 
-.ItemFooterCartItem {
+.FooterCartItem {
     display: flex;
 }
 
-h4{
-    text-align: center;
-    margin: 50px 0;
-    font-size: 1rem;
-}

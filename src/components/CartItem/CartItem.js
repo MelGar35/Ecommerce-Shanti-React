@@ -13,23 +13,23 @@ const CartItem = ({ id, name, quantity, price }) => {
     return (
         <article className='CardCartItem'>
             <header className="HeaderCartItem">
-                <h2 className="ItemHeaderCartItem">
+                <h4 className="ItemHeaderCartItem">
                     {name}
-                </h2>
+                </h4>
             </header>
             <section className='ContainerItemCartItem'>
-                <p className="InfoCartItem">
+                <p className="InfoPedidoCart">
                     Cantidad: {quantity}
                 </p>
-                <p className="InfoCartItem">
-                    Precio x Unidad: ${price}.-
+                <p className="InfoPedidoCart">
+                    Precio Unitario: ${price}.-
                 </p>
             </section>           
-            <footer className='ItemFooterCartItem'>
-                <p className="InfoCartItem">
+            <footer className='FooterCartItem'>
+                <p className="InfoPedidoCart">
                      Subtotal: ${price * quantity}.-
                 </p>
-                <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Eliminar</button>
+                <button className='eliminarButton' onClick={() => handleRemove(id)}>Eliminar</button>
             </footer>
         </article>
     )

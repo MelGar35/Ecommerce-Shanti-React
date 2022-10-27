@@ -9,14 +9,14 @@ const Cart = () => {
 
     if(totalQuantity === 0) {
         return (
-            <h1>No hay items en el carrito</h1>
+            <h2 className='carritoVacio'>El carrito esta vacío.</h2>
         )
     }
 
     return (     
         <div>
             <h2>Carrito</h2>
-            { cart.map(p => <CartItem key={p.id} {...p}/>) }
+            { cart.map(prod => <CartItem key={prod.id} {...prod}/>) }
             <h3>Total: ${total}.-</h3>
             <button onClick={() => clearCart()} className="vaciarButton">Vaciar carrito</button>
             <Link to='/checkout' className="pedirButton">Realizar pedido</Link>
