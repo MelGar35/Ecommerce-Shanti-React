@@ -1,26 +1,19 @@
-import { useState, useEffect } from "react"
-import { getProduct } from "../../asyncMock"
 import {useParams} from "react-router-dom"
 import "./ItemDetailContainer.css"
 import ItemDetail from "../ItemDetail/ItemDetail"
+import { useAsync } from '../../hooks/useAsync'
+import { getProductsById } from '../../services/firebase/firestore'
 
-const ItemDetailContainer = (setCart) => {
-    const [product, setProduct] = useState({})
-    const [loading, setLoading] = useState (true)
-    const {productId} = useParams()
 
-    useEffect(()=>{
-        getProduct(productId).then(product =>{
-            setProduct(product)
-        }).finally(()=>{
-            setLoading(false)
-        })
-    
-    },[productId])
+const ItemDetailContainer = 
+({setCart}) =>{
+    const { productId } = useParams()
+
+    const {data: product, loading} = useAsync(() => getProductsById(productId), [productId])
 
     if (loading) {
         return (
-            <h2>Loading...</h2>
+            <h2>Cargando...</h2>
         )
     }
 
