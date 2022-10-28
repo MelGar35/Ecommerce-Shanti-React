@@ -2,13 +2,13 @@ import "./Footer.css"
 
 const Footer = () => {
     return(
-    <nav className='footer'>
+    <footer className='footer'>
         <div>
             <h5>
                 @Shanti, todos los derechos reservados.
             </h5>
         </div>
-    </nav>
+    </footer>
     )
 }
 

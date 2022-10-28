@@ -19,7 +19,7 @@ export const useAsync = (asyncFunc, dependencies = []) =>{
         }).finally (()=> {
             setLoading(false)
         })
-    }, dependencies)
+    },dependencies)
 
     return{
         data,
