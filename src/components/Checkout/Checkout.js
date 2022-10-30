@@ -9,44 +9,48 @@ import Swal from "sweetalert2"
 const Checkout = () =>{
     const [loading, setLoading] = useState(false)
     const {cart, total, clearCart} = useContext(CartContext)
-    
-
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
-    const [dni, setDni] = useState('')
+    const [telefono, setTelefono] = useState('')
     const [email, setEmail] = useState('')
+    const [email2, setEmail2] = useState('')
 
-    const crearOrden = async () =>{
+
+    const crearOrden = async (e) =>{
+        e.preventDefault()
         setLoading(true)
-        try{
 
+    if (email === email2 && nombre !== "" && apellido !== "" && telefono !== "" && email !== ""){
+    
+        try{
         const objOrder = {
             buyer: {
                 nombre: `${nombre}`,
                 apellido: `${apellido}`,
                 email: `${email}`,
-                dni: `${dni}`
+                email2: `${email2}`,
+                telefono: `${telefono}`
             } ,
             items: cart,
             total
         }
-
+        
         const ids = cart.map(prod => prod.id)
         const productsRef = collection(db, 'products')
 
         const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(),'in', ids)))
         const { docs } = productsAddedFromFirestore
-
+    
         const batch = writeBatch(db)
         const outOfStock = []
-
+    
         docs.forEach(doc => {
             const dataDoc = doc.data()
             const stockDb = dataDoc.stock
 
             const productAddedToCart = cart.find(prod => prod.id === doc.id)
             const prodQuantity = productAddedToCart?.quantity 
-
+        
             if(stockDb >= prodQuantity){
                 batch.update(doc.ref, {stock: stockDb - prodQuantity})
             }else{
@@ -60,7 +64,7 @@ const Checkout = () =>{
             const orderAdded = await addDoc(orderRef, objOrder)
             Swal.fire(
                 'Su orden se ha realizado con exito',
-                `el código de su orden es ${orderAdded.id}`,
+                `el código de seguimiento de su orden es ${orderAdded.id}`,
                 'success'
             )
             clearCart()
@@ -76,7 +80,16 @@ const Checkout = () =>{
     } finally{
         setLoading(false)
     }
+}else {
+    Swal.fire(
+        'Debes completar todos los datos',
+        '',
+        'error'
+    )
+    setLoading(false)
 }
+}
+    
 if(loading){
     return <div>
         <h1>Su orden se esta procesando!</h1>
@@ -84,14 +97,13 @@ if(loading){
         <h1>Cargando...</h1>
     </div>
     </div>
+    
 }
-
     return(
         <>
-        <h2> Complete sus Datos </h2>
+        <h2>Datos de contacto</h2>
         <form className='form'>
-                <input 
-                name='nombre'
+                <input name='nombre'
                 className='formInput' 
                 value={nombre} 
                 placeholder='Nombre' 
@@ -113,18 +125,24 @@ if(loading){
                 required="required"
                 onChange={(e) => setEmail(e.target.value)}/>
                 <input
-                name='dni'
+                name='email2' 
                 className='formInput' 
-                min='7000000' 
-                max='99999999' 
-                value={dni} 
-                placeholder='DNI' 
+                value={email2} 
+                placeholder='Confirme Email' 
+                type='email'
                 required="required"
-                type='number'onChange={(e) => setDni(e.target.value)}/>
-                <button onClick={crearOrden} className='buttonOrder' >Generar Orden</button>
+                onChange={(e) => setEmail2(e.target.value)}/>
+                <input
+                name='telefono'
+                className='formInput' 
+                value={telefono} 
+                placeholder='Telefono' 
+                required="required"
+                type='number'onChange={(e) => setTelefono(e.target.value)}/>
+                <button type="submit" onClick={crearOrden} className='buttonOrder' >Generar Orden</button>
         </form>
         </>
     )
-}
+    }
 
 export default Checkout
