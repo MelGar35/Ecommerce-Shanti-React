@@ -22,9 +22,8 @@ Para simular este comportamiento es necesario crear un nuevo Project dentro de f
 
 El proyecto debe contener dos colecciones: 
 
-**products**  `{ category: 'camisas', description: 'Descripcion de camisa', img: '', name:'nombre camisa', price: 'precio camisa en number', stock: 'valor en number'  }`
-
-**categories** `{ label: 'Camisas', order: '1', slug:'camisas'  }` 
+products
+categories
 
 1. Descargá o clona el repositorio
 2. Creá un nuevo proyecto en firebase con las indicaciones e información mencionada anteriormente
